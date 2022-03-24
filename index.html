@@ -10,64 +10,26 @@
 <body>
   <div class="container">
     <h1>Calculator</h1>
-    <h2>Additon</h2>
-      <form id="add">
+    <h2>Choose Operator</h2>
+    <select id="operator">
+      <option></option>
+      <option value="Add">add</option>
+      <option value="Subtract">subtract</option>
+      <option value="Multiply">multiply</option>
+      <option value="Divide">divide</option>
+    </select>
+      <form id="math">
         <div class="form-group">
-          <label for="add1">1st number:</label>
-          <input id="add1" class="form-control" type="text">
+          <label for="input1">1st number:</label>
+          <input id="input1" class="form-control" type="number">
         </div>
         <div class="form-group">
-          <label for="add2">2nd number:</label>
-          <input id="add2" class="form-control" type="text">
+          <label for="input2">2nd number:</label>
+          <input id="input2" class="form-control" type="number">
         </div>
-        <button type="submit" class="btn">Add!</button>
+        <button type="submit" class="btn"></button>
       </form>
-      <div id="outputAdd">
-      </div>
-
-    <h2>Subtraction</h2>
-      <form id="subtract">
-        <div class="form-group">
-          <label for="sub1"> 1st Number:</label>
-          <input id="sub1" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="sub2">2nd Number:</label>
-          <input id="sub2" class="form-control" type="text">
-        </div>
-        <button type="submit" class="btn">Subtract!</button>
-      </form>
-      <div id="outputSub">
-      </div>
-
-    <h2>Multiplication</h2>
-      <form id="multiply">
-        <div class="form-group">
-          <label for="mult1">1st Number:</label>
-          <input id="mult1" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="mult2"> 2nd Number:</label>
-          <input id="mult2" class="form-control" type="text">
-        </div>
-        <button type="submit" class="btn">Multpiply!</button>
-      </form>
-      <div id="outputMult">
-      </div>
-
-    <h2>Division</h2>
-      <form id="divide">
-        <div class="form-group">
-          <label for="div1">1st Number:</label>
-          <input id="div1" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="div2"> 2nd Number:</label>
-          <input id="div2" class="form-control" type="text">
-        </div>
-        <button type="submit" class="btn">Divide!</button>
-      </form>
-      <div id="outputDiv">
+      <div id="output">
       </div>
   </div>
 </body>

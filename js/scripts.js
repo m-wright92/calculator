@@ -19,36 +19,34 @@ function divide(number1, number2) {
 //  User interface logic
 
 $(document).ready(function() {
-  $("form#add").submit(function(event) {
+  $("#operator").change(function(event) {
     event.preventDefault();
-    const number1 = parseInt($("#add1").val());
-    const number2 = parseInt($("#add2").val());
-    const result = add(number1, number2);
-    $("#outputAdd").text(result);
+    const operator = $("#operator").val();
+    $("button").text(operator);
   });
 
-  $("form#subtract").submit(function(event) {
+  $("form#math").submit(function(event) {
     event.preventDefault();
-    const number1 = parseInt($("#sub1").val());
-    const number2 = parseInt($("#sub2").val());
-    const result = subtract(number1, number2);
-    $("#outputSub").text(result);
-  });
-
-  $("form#multiply").submit(function(event) {
-    event.preventDefault();
-    const number1 = parseInt($("#mult1").val());
-    const number2 = parseInt($("#mult2").val());
-    const result = multiply(number1, number2);
-    $("#outputMult").text(result);
-  });
-
-  $("form#divide").submit(function(event) {
-    event.preventDefault();
-    const number1 = parseInt($("#div1").val());
-    const number2 = parseInt($("#div2").val());
-    const result = divide(number1, number2);
-    $("#outputDiv").text(result);
+    let operator = $("#operator").val();
+    const number1 = parseInt($("#input1").val());
+    const number2 = parseInt($("#input2").val());
+    const num1 = number1.toString();
+    const num2 = number2.toString();
+    let result;
+    if (operator === "Add") {
+      result = add(number1, number2);
+      operator = "+";
+    } else if (operator === "Subtract") {
+      result = subtract(number1, number2); 
+      operator = "-";
+      }else if (operator === "Multiply") {
+        result = multiply(number1, number2);
+        operator = "*";
+      } else if (operator === "Divide") {
+        result = divide(number1, number2);
+        operator = "/"
+      }
+    $("#output").text("Result: " + num1 + " " + operator + " " + num2 + " = " + result);
   });
 });
 
