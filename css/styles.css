@@ -1,0 +1,19 @@
+button {
+  width: 5vmin;
+  height: 5vmin;
+}
+
+.buttons {
+  width: 20vmin;
+}
+
+#zero {
+  width: 10vmin;
+}
+
+#newOutput {
+  border: 1px solid grey;
+  width: 20vmin;
+  height: 5vmin;
+  margin-left: 1.5vmin;
+}
